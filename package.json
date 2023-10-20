@@ -1,0 +1,39 @@
+{
+  "name": "cookie-signature-subtle",
+  "version": "1.0.0",
+  "description": "Sign and unsign cookies using web standard SubtleCrypto (browser-compatible)",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=15.13.0"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "c8 --reporter=html --reporter=text ava"
+  },
+  "repository": "nexdrew/cookie-signature-subtle",
+  "funding": "https://github.com/nexdrew/cookie-signature-subtle?sponsor=1",
+  "keywords": [
+    "cookie",
+    "sign",
+    "unsign",
+    "verify",
+    "hmac",
+    "subtle",
+    "webcrypto"
+  ],
+  "author": "nexdrew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nexdrew/cookie-signature-subtle/issues"
+  },
+  "homepage": "https://github.com/nexdrew/cookie-signature-subtle#readme",
+  "devDependencies": {
+    "ava": "^5.3.1",
+    "c8": "^8.0.1",
+    "standard": "^17.1.0"
+  }
+}

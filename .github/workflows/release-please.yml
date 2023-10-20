@@ -1,0 +1,40 @@
+name: Autorelease
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    name: Create or Update PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run release-please
+        id: release
+        uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: node
+          package-name: cookie-signature-subtle
+          default-branch: master
+      # - name: Checkout Code for Publish
+      #   uses: actions/checkout@v4
+      #   if: ${{ steps.release.outputs.release_created }}
+      # - name: Setup Node for Publish
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 20
+      #     registry-url: 'https://registry.npmjs.org'
+      #   if: ${{ steps.release.outputs.release_created }}
+      # - name: Install Dependencies for Publish
+      #   run: npm i --ignore-scripts
+      #   if: ${{ steps.release.outputs.release_created }}
+      # - name: Publish to npm
+      #   run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      #   if: ${{ steps.release.outputs.release_created }}

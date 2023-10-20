@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  test:
+    name: Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node-version:
+          - 21
+          - 20
+          - 18
+          - 16
+        os:
+          - ubuntu-latest
+          # - macos-latest
+          # - windows-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          # cache: npm
+      - name: Install Dependencies
+        run: npm i --ignore-scripts
+      - name: Lint
+        run: npm run lint
+      - name: Run Tests
+        run: npm t
