@@ -8,7 +8,7 @@
     "index.js"
   ],
   "engines": {
-    "node": ">=15.13.0"
+    "node": ">=20.0.0"
   },
   "scripts": {
     "lint": "standard",
