@@ -9,11 +9,13 @@ async function getWebCrypto () {
     // console.log('Loaded globalThis.crypto.webcrypto')
     return (_crypto = globalThis.crypto.webcrypto) // Node 15/16/18 (repl)
   }
+  /*
   const x = await import('node:crypto')
   if (x.webcrypto) {
     // console.log('Loaded import(\'node:crypto\').webcrypto')
     return (_crypto = x.webcrypto) // Node 15/16/18 (non-repl)
   }
+  */
   throw new Error('Your runtime does not provide a WebCrypto library.')
 }
 
@@ -28,11 +30,13 @@ async function getBuffer () {
     // console.log('Loaded atob/btoa from globalThis')
     return (_buffer = globalThis) // browser
   }
+  /*
   const x = await import('node:buffer')
   if (x.btoa) {
     // console.log('Loaded atob/btoa from import(\'node:buffer\')')
     return (_buffer = x)
   }
+  */
   throw new Error('Your runtime does not provide an impl for atob/btoa.')
 }
 
