@@ -6,7 +6,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg)](https://conventionalcommits.org)
 
-This library makes it easy to sign response cookie values and authenticate request cookie values using a shared secret. Although the intent is to handle cookie values for your application, this library doesn't work directly with a request or response headers, and it can be used for signing/authenticating any simple strings.
+This library makes it easy to sign response cookie values and authenticate request cookie values using a shared secret. Although the intent is to handle cookie values for your application, this library doesn't work directly with request or response headers, and it can be used for signing/authenticating any simple strings.
 
 This is a rewrite of the original [`cookie-signature` package](https://www.npmjs.com/package/cookie-signature) that uses the [`SubtleCrypto`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto) standard of the modern [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) instead of the [Node.js-specific `crypto` module](https://nodejs.org/dist/latest/docs/api/crypto.html), for better compatibility with runtimes like [Vercel's Edge Runtime](https://vercel.com/docs/functions/edge-functions/edge-runtime). It shares the same API contract as `cookie-signature` except that the methods are asynchronous (returning a `Promise`) instead of synchronous, due to the nature of the `SubtleCrypto` API.
 
