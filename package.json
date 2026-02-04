@@ -1,6 +1,6 @@
 {
   "name": "cookie-signature-subtle",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Sign and unsign cookies using web standard SubtleCrypto (browser-compatible)",
   "type": "module",
   "main": "index.js",

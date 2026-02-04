@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/nexdrew/cookie-signature-subtle/compare/v2.0.0...v2.1.0) (2026-02-04)
+
+
+### Features
+
+* add TypeScript definitions ([#5](https://github.com/nexdrew/cookie-signature-subtle/issues/5)) ([8b57c86](https://github.com/nexdrew/cookie-signature-subtle/commit/8b57c864d9f60e4b5432ddc69ac54c0990bb3ae8))
+
 ## [2.0.0](https://github.com/nexdrew/cookie-signature-subtle/compare/v1.0.0...v2.0.0) (2025-07-12)
 
 
