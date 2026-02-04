@@ -46,4 +46,4 @@ jobs:
       - name: Install Dependencies
         run: bun install
       - name: Run Tests
-        run: bun test
+        run: bun test --coverage
