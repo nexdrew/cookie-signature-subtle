@@ -35,8 +35,8 @@
   },
   "homepage": "https://github.com/nexdrew/cookie-signature-subtle#readme",
   "devDependencies": {
-    "ava": "^5.3.1",
-    "c8": "^8.0.1",
+    "ava": "^6.4.1",
+    "c8": "^10.1.3",
     "standard": "^17.1.0"
   }
 }
