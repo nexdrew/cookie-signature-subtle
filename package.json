@@ -4,11 +4,14 @@
   "description": "Sign and unsign cookies using web standard SubtleCrypto (browser-compatible)",
   "type": "module",
   "main": "index.js",
+  "types": "index.d.ts",
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=20.0.0",
+    "bun": ">=1.1.0"
   },
   "scripts": {
     "lint": "standard",
